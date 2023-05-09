@@ -13,36 +13,42 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        <div id="appMeeting">
+                        <div id="appInformation">
                             <table class="table">
-                                <caption>Записи</caption>
+                                <caption>Информация</caption>
                                 <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Имя</th>
-                                    <th scope="col">Телефон</th>
-                                    <th scope="col">Дата</th>
-                                    <th scope="col">Время</th>
+                                    <th scope="col">title</th>
+                                    <th scope="col">text</th>
                                     <th scope="col">Удалить</th>
 
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr v-for="meeting in meetings">
-                                    <th scope="row">{* meeting.id *}</th>
-                                    <td>{* meeting.client.name *}</td>
-                                    <td>{* meeting.client.phone *}</td>
-                                    <td>{* meeting.date *}</td>
-                                    <td>{* meeting.time *}</td>
+                                <tr v-for="infoItem in information">
+                                    <th scope="row">{* infoItem.id *}</th>
+                                    <td>{* infoItem.title *}</td>
+                                    <td>{* infoItem.text *}</td>
                                     <td>
                                         <button type="button"
-                                                v-on:click="deleteMeeting(meeting.id)"
+                                                v-on:click="deleteInformation(infoItem.id)"
                                                 class="btn btn-danger">Удалить
                                         </button>
                                     </td>
                                 </tr>
                                 </tbody>
                             </table>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Оглавление</label>
+                                <input v-model="title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Оглавление">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Текст</label>
+                                <textarea v-model="text" class="form-control" rows="3"></textarea>
+                            </div>
+                            <button type="button" class="btn btn-primary" @click="addInformation()">Добавить</button>
                         </div>
                     </div>
                 </div>
@@ -51,5 +57,5 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="{{ asset('js/adminMeeting.js') }}"></script>
+    <script src="{{ asset('js/adminInformation.js') }}"></script>
 @endsection

@@ -28,3 +28,10 @@ Route::group(['namespace' => 'Meeting'], function () {
     Route::delete('/meeting/{meeting}', 'DestroyController');
 
 });
+
+Route::group(['namespace' => 'Information'], function () {
+    Route::get('/information', 'IndexController');
+    Route::post('/information', 'StoreController');
+    Route::delete('/information/{information}', 'DestroyController');
+
+});

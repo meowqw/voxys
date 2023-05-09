@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\InformationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/admin', [HomeController::class, 'index'])->name('home');
+Route::get('/information', [InformationController::class, 'index'])->name('information');
+
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
 

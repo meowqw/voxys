@@ -1,8 +1,10 @@
 new Vue({
     delimiters: ['{*', '*}'],
-    el: '#appMeeting',
+    el: '#appInformation',
     data: {
-        meetings: [],
+        information: [],
+        text: '',
+        title: '',
     },
     methods: {
         updateData: async function (url, data) {
@@ -57,18 +59,22 @@ new Vue({
             return response.json();
         },
 
-        getMeetings: async function () {
-            let data = await this.getData('/api/meeting');
-            this.meetings = data.data;
+        getInformation: async function () {
+            let data = await this.getData('/api/information');
+            this.information = data.data;
         },
 
-        deleteMeeting: async function (id) {
-            await this.deleteData(`/api/meeting/${id}`);
-            await this.getMeetings();
+        deleteInformation: async function (id) {
+            await this.deleteData(`/api/information/${id}`);
+            await this.getInformation();
+        },
+        addInformation: async function() {
+            await this.postData('/api/information', {'title': this.title, 'text': this.text});
+            await this.getInformation();
         }
 
     },
     async mounted() {
-        await this.getMeetings();
+        await this.getInformation();
     },
 })

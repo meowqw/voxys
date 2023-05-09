@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="shortcut icon" href="{{ asset('favicon.png') }}" type="image/x-icon" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="theme-color" content="#fff" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="shortcut icon" href="{{ asset('favicon.png') }}" type="image/x-icon"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="theme-color" content="#fff"/>
     <title>Добро пожаловать в VOXYS | Начни карьеру сегодня</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Raleway:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     />
-    <link rel="stylesheet" href="{{ asset('css/vendor.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/vendor.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}"/>
     <script defer="defer" src="{{ asset('js/main.js') }}"></script>
 </head>
 <body class="page__body">
@@ -91,7 +91,7 @@
                 <h2 class="title title--h2 about-company__title">О компании</h2>
                 <p class="about-company__descr">
               <span>VOXYS СЕГОДНЯ — ЛИДЕР РЫНКА КЛИЕНТСКОГО СЕРВИСА.</span
-              ><br />Центр коммуникаций VOXYS образован в 2020 году в результате
+              ><br/>Центр коммуникаций VOXYS образован в 2020 году в результате
                     масштабного объединения четыре компаний: BEEPER, Comfortel,
                     TELECOMEXPRESS и Лоджиколл —российских контакт-центров c более чем
                     20-ти летним опытом работы в отрасли клиентского сервиса.
@@ -139,8 +139,9 @@
                     </div>
                     <div class="work-block__img">
                         <picture
-                        ><source srcset="{{ asset('img/career-1.avif') }}" type="image/avif" />
-                            <source srcset="{{ asset('img/career-1.webp') }}" type="image/webp" />
+                        >
+                            <source srcset="{{ asset('img/career-1.avif') }}" type="image/avif"/>
+                            <source srcset="{{ asset('img/career-1.webp') }}" type="image/webp"/>
                             <img
                                 loading="lazy"
                                 src="{{ asset('img/career-1.png') }}"
@@ -172,8 +173,9 @@
                     </div>
                     <div class="work-block__img">
                         <picture
-                        ><source srcset="{{ asset('img/career-2.avif') }}" type="image/avif" />
-                            <source srcset="{{ asset('img/career-2.webp') }}" type="image/webp" />
+                        >
+                            <source srcset="{{ asset('img/career-2.avif') }}" type="image/avif"/>
+                            <source srcset="{{ asset('img/career-2.webp') }}" type="image/webp"/>
                             <img
                                 loading="lazy"
                                 src="{{ asset('img/career-1.png') }}"
@@ -315,7 +317,7 @@
                 <div class="connect__content">
                     <div class="connect__left">
                         <h3 class="title title--h3 connect__title">
-                            Напишите нам,<br />и мы с вами свяжемся
+                            Напишите нам,<br/>и мы с вами свяжемся
                         </h3>
                         <form action="#" class="form connect__form">
                             <label class="form__label"
@@ -405,8 +407,9 @@
         }
     }
 </script>
+
+</body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="{{ asset('js/sendMeeting.js') }}"></script>
-</body>
 </html>
