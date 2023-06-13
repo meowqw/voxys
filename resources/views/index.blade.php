@@ -83,7 +83,7 @@
                 <p class="hero__descr">
                     Начни карьеру сегодня в любом из наших городов присутствия.
                 </p>
-                <a href="#" class="hero__link btn">Стать частью команды</a>
+                <a href="#connect" class="hero__link btn">Стать частью команды</a>
             </div>
         </section>
         <section class="about-company section" id="about-company">
@@ -354,9 +354,11 @@
                                     class="input-reset form__input"
                                     placeholder="Время, когда с вами связаться"
                                 /></label>
+
                             <button class="btn-reset btn form__btn" type="button" v-on:click="sendMeet()">
                                 Оставить заявку
                             </button>
+                            <p>Нажимая на "Оставить заявку" вы даете согласие на обработку ваших персональных данных</p>
 
                             <h1 v-if="successMsg">Спасибо за проявленный интерес к нашей компании! </h1>
                         </form>
@@ -369,7 +371,7 @@
                             Вы можете воспользоваться функцией автозаписи через телеграм
                             бота. Это гораздо удобнее и практичнее.
                         </p>
-                        <button class="btn-reset btn form__btn">
+                        <button class="btn-reset btn form__btn" onclick="location.href='https://t.me/voxysxBot'">
                             Стать частью команды
                         </button>
                     </div>
